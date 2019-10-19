@@ -1,4 +1,9 @@
 const express = require('express')
+const handlebars  = require('express-handlebars')
+
 const app = express()
-app.get('/',(_req,res) => res.send('Hello World!'))
+app.engine('handlebars', handlebars())
+app.set('view engine', 'handlebars')
+
+app.get('/',(_req,res) => res.render('home'))
 app.listen(3000,() => undefined)
