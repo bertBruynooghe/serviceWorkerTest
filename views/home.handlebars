@@ -1,4 +1,4 @@
-    <button onclick="axios.get('/').then(result => alert('done'))">test</button>
+    <button onclick="axios.get('/').then(result => alert(JSON.stringify(result)))">test</button>
     <script>
       if (navigator.serviceWorker) {
           navigator.serviceWorker.register('./service-worker.js', /* {scope: './about'} */)

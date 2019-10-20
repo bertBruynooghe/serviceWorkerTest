@@ -7,6 +7,7 @@ self.addEventListener('activate', function(event){
 })
 
 self.addEventListener('fetch', function(event){
-  console.log(event.request.url)
   // return something for each interception
+  console.log('request', event.request)
+  event.respondWith(fetch(event.request))  
 })
